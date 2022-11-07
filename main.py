@@ -359,7 +359,7 @@ async def message_handler(msg: MessageType):
 
 	if msg_generated:
 		# Сообщение было успешно сгенерировано. Фильтруем, удаляем упоминания:
-		msg_generated = re.sub(r"(@\w*)", "<i><a href=\"https://t.me/\\1\">@\\1</a></i>", msg_generated)
+		msg_generated = re.sub(r"@(\w*)", "<i><a href=\"https://t.me/\\1\">@\\1</a></i>", msg_generated)
 
 		# Отправляем сгенерированное сообщение :)
 
